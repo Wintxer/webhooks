@@ -1,8 +1,11 @@
 <?php
     file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
 
-    $data = file_get_contents('verify.log');
-    echo $data;
+
+    echo $_GET['hub_challenge'];
+    die();
+    // $data = file_get_contents('verify.log');
+    // echo $data;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
