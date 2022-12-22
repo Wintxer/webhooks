@@ -19,11 +19,6 @@
             )
         );
 
-        $responseInfo = makeApiCall($params);
-
-        echo '<pre>';
-        print_r($responseInfo);
-
         function makeApiCall($params) {
             $ch = curl_init();
 
@@ -48,7 +43,14 @@
             }
             return $responseArray;
         }
+        
+        $responseInfo = makeApiCall($params);
+    
+        echo '<pre>';
+        print_r($responseInfo);
     }
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
