@@ -43,7 +43,10 @@
 
             $responseArray = json_decode( $response, true);
 
-            return;
+            if(curl_errno($ch)) {
+                return 'Curl error: ' . curl_error($ch);
+            }
+            return $responseArray;
         }
     }
 ?>
