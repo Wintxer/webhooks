@@ -19,10 +19,15 @@
             )
         );
 
+        $responseInfo = makeApiCall($params);
+    
+        echo '<pre>';
+        print_r($responseInfo);
+
         function makeApiCall($params) {
             $ch = curl_init();
 
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query( $parmas["url_params"]));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query( $params["url_params"]));
 
             curl_setopt($ch, CURLOPT_POST, 1);
 
@@ -43,11 +48,6 @@
             }
             return $responseArray;
         }
-
-        $responseInfo = makeApiCall($params);
-    
-        echo '<pre>';
-        print_r($responseInfo);
     }
 
 ?>
