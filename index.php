@@ -1,11 +1,16 @@
 <?php
-    file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
+    // VERIFICATION STEPS
+    // file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
+    // echo $_GET['hub_challenge'];
+    // die();
 
+    // TESTING OF THE WEBHOOKS
+    $json = file_get_contents('php://input');
+    $data = json_decode($json);
+    file_put_contents( 'data.log', print_r( $data, true ), FILE_APPEND );
 
-    echo $_GET['hub_challenge'];
+    var_dump($data);
     die();
-    // $data = file_get_contents('verify.log');
-    // echo $data;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
