@@ -2,6 +2,7 @@
     $pageID = "100924122885991";
     $apiVersion = "v15.0";
     $recipientID = "6407845042576306";
+    $access_token = $_GET["access_token"];
 
     $params = array(
         "endpoint_url" => "https://graph.facebook.com/". $apiVersion . "/" . $pageID . "/messages",
@@ -13,7 +14,7 @@
             "message" => array(
                 "text" => "Réponse automatique du webhook"
             ),
-            "access_token" => $acces_token
+            "access_token" => $access_token
         )
     );
 
