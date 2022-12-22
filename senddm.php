@@ -43,13 +43,12 @@
             }
             return $responseArray;
         }
-        
+
         $responseInfo = makeApiCall($params);
     
         echo '<pre>';
         print_r($responseInfo);
     }
-    
 
 ?>
 <!DOCTYPE html>
