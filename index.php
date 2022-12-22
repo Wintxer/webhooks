@@ -25,7 +25,7 @@
     <h1>Instagram Graph API Webhooks</h1>
 
     <form action="senddm.php">
-        <input type="text" name="text" id="access_token">
+        <input type="text" name="access_token" id="access_token">
         <button type="submit">Envoyer</button>
     </form>
 </body>
